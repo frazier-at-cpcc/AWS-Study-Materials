@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AWS Study Materials</title>
+<meta name="description" content="Study notes and cheat sheets for AWS Academy Cloud Foundations and Generative AI Foundations.">
+<style>
+  :root {
+    --ink:#131619; --navy:#1e3a5f; --orange:#ec7211; --amber:#b35c00;
+    --paper:#ffffff; --wash:#f4f6f9; --line:#e2e6ec; --muted:#5b6672;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; background:var(--wash); color:var(--ink);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  a { color:inherit; }
+  header.hero {
+    background:linear-gradient(160deg,#1e3a5f 0%,#16304e 100%);
+    color:#fff; padding:56px 24px 48px; border-bottom:4px solid var(--orange);
+  }
+  .wrap { max-width:960px; margin:0 auto; }
+  .kicker {
+    display:inline-block; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--orange); font-weight:700; margin:0 0 10px;
+  }
+  header.hero h1 { margin:0 0 12px; font-size:clamp(28px,5vw,44px); line-height:1.1; letter-spacing:-.01em; }
+  header.hero p { margin:0; max-width:60ch; color:#cdd7e3; font-size:17px; }
+  main { max-width:960px; margin:0 auto; padding:40px 24px 24px; }
+  .course {
+    background:var(--paper); border:1px solid var(--line); border-radius:14px;
+    padding:28px 28px 8px; margin:0 0 28px; box-shadow:0 1px 3px rgba(20,30,45,.05);
+  }
+  .course-hd h2 { margin:0 0 4px; font-size:22px; color:var(--navy); letter-spacing:-.01em; }
+  .course-meta { margin:0 0 10px; font-size:13px; font-weight:600; color:var(--orange); letter-spacing:.02em; }
+  .course-blurb { margin:0 0 18px; color:var(--muted); font-size:15px; max-width:70ch; }
+  ul.mods { list-style:none; margin:0; padding:0; }
+  li.mod {
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
+    padding:14px 0; border-top:1px solid var(--line);
+  }
+  .mod-head { display:flex; align-items:center; gap:14px; min-width:0; }
+  .badge {
+    flex:none; display:inline-grid; place-items:center; width:44px; height:32px;
+    background:var(--navy); color:#fff; font-weight:700; font-size:13px;
+    border-radius:7px; letter-spacing:.02em;
+  }
+  .mod-title { font-weight:600; font-size:15.5px; }
+  .docs { display:flex; gap:8px; flex:none; }
+  a.doc {
+    text-decoration:none; font-size:13px; font-weight:600; padding:8px 14px;
+    border-radius:8px; border:1px solid transparent; white-space:nowrap; transition:.15s;
+  }
+  a.doc.cheat { background:#fff4ea; color:var(--amber); border-color:#f6d9bd; }
+  a.doc.cheat:hover { background:var(--orange); color:#fff; border-color:var(--orange); }
+  a.doc.notes { background:#eef3f9; color:var(--navy); border-color:#d3e0ee; }
+  a.doc.notes:hover { background:var(--navy); color:#fff; border-color:var(--navy); }
+  footer {
+    max-width:960px; margin:0 auto; padding:24px; color:var(--muted); font-size:13px;
+    border-top:1px solid var(--line);
+  }
+  footer a { color:var(--navy); font-weight:600; text-decoration:none; }
+  footer a:hover { text-decoration:underline; }
+  @media (max-width:560px) {
+    li.mod { align-items:flex-start; }
+    .docs { width:100%; }
+    a.doc { flex:1; text-align:center; }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper:#161b22; --wash:#0d1117; --line:#293240; --ink:#e6edf3; --muted:#9aa7b4; }
+    body { color:var(--ink); }
+    .course { box-shadow:none; }
+    .course-hd h2 { color:#8ab4e8; }
+    .badge { background:#274060; }
+    a.doc.cheat { background:#3a2a18; color:#f0a35e; border-color:#5a3f22; }
+    a.doc.notes { background:#1c2b3f; color:#9ec5f0; border-color:#2c4258; }
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <span class="kicker">AWS Academy · Exam Prep</span>
+      <h1>AWS Study Materials</h1>
+      <p>Condensed study notes and printable cheat sheets for AWS Academy Cloud Foundations and Generative AI Foundations — one of each per module, built for fast review and exam readiness.</p>
+    </div>
+  </header>
+  <main>
+    <section class="course">
+      <div class="course-hd">
+        <h2>AWS Academy Cloud Foundations</h2>
+        <p class="course-meta">Modules 1–10 · Cloud Practitioner track</p>
+        <p class="course-blurb">Foundational AWS concepts: the cloud, economics &amp; billing, global infrastructure, security, networking, compute, storage, databases, architecture, and scaling.</p>
+      </div>
+      <ul class="mods">
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M01</span><span class="mod-title">Cloud Concepts Overview</span></div>
+          <div class="docs"><a class="doc cheat" href="cloud-foundations/M01%20Cheat%20Sheet%20%E2%80%94%20Cloud%20Concepts%20Overview.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M01%20Study%20Notes%20%E2%80%94%20Cloud%20Concepts%20Overview.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M02</span><span class="mod-title">Cloud Economics and Billing</span></div>
+          <div class="docs"><a class="doc cheat" href="cloud-foundations/M02%20Cheat%20Sheet%20%E2%80%94%20Cloud%20Economics%20and%20Billing.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M02%20Study%20Notes%20%E2%80%94%20Cloud%20Economics%20and%20Billing.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M03</span><span class="mod-title">AWS Global Infrastructure Overview</span></div>
+          <div class="docs"><a class="doc cheat" href="cloud-foundations/M03%20Cheat%20Sheet%20%E2%80%94%20AWS%20Global%20Infrastructure%20Overview.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M03%20Study%20Notes%20%E2%80%94%20AWS%20Global%20Infrastructure%20Overview.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M04</span><span class="mod-title">AWS Cloud Security</span></div>
+          <div class="docs"><a class="doc cheat" href="cloud-foundations/M04%20Cheat%20Sheet%20%E2%80%94%20AWS%20Cloud%20Security.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M04%20Study%20Notes%20%E2%80%94%20AWS%20Cloud%20Security.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M05</span><span class="mod-title">Networking and Content Delivery</span></div>
+          <div class="docs"><a class="doc cheat" href="cloud-foundations/M05%20Cheat%20Sheet%20%E2%80%94%20Networking%20and%20Content%20Delivery.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M05%20Study%20Notes%20%E2%80%94%20Networking%20and%20Content%20Delivery.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M06</span><span class="mod-title">Compute</span></div>
+          <div class="docs"><a class="doc cheat" href="cloud-foundations/M06%20Cheat%20Sheet%20%E2%80%94%20Compute.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M06%20Study%20Notes%20%E2%80%94%20Compute.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M07</span><span class="mod-title">Storage</span></div>
+          <div class="docs"><a class="doc cheat" href="cloud-foundations/M07%20Cheat%20Sheet%20%E2%80%94%20Storage.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M07%20Study%20Notes%20%E2%80%94%20Storage.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M08</span><span class="mod-title">Databases</span></div>
+          <div class="docs"><a class="doc cheat" href="cloud-foundations/M08%20Cheat%20Sheet%20%E2%80%94%20Databases.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M08%20Study%20Notes%20%E2%80%94%20Databases.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M09</span><span class="mod-title">Cloud Architecture</span></div>
+          <div class="docs"><a class="doc cheat" href="cloud-foundations/M09%20Cheat%20Sheet%20%E2%80%94%20Cloud%20Architecture.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M09%20Study%20Notes%20%E2%80%94%20Cloud%20Architecture.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M10</span><span class="mod-title">Automatic Scaling and Monitoring</span></div>
+          <div class="docs"><a class="doc cheat" href="cloud-foundations/M10%20Cheat%20Sheet%20%E2%80%94%20Automatic%20Scaling%20and%20Monitoring.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M10%20Study%20Notes%20%E2%80%94%20Automatic%20Scaling%20and%20Monitoring.pdf">Study Notes</a></div>
+        </li>
+      </ul>
+    </section>
+    <section class="course">
+      <div class="course-hd">
+        <h2>AWS Academy Generative AI Foundations</h2>
+        <p class="course-meta">Modules 2–9 · AI Practitioner track</p>
+        <p class="course-blurb">Generative AI on AWS: foundational AI, generative models, prompt engineering, foundation models, responsible AI, security &amp; governance, implementation, and certification.</p>
+      </div>
+      <ul class="mods">
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introducing AI</span></div>
+          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M02%20Cheat%20Sheet%20%E2%80%94%20Introducing%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M02%20Study%20Notes%20%E2%80%94%20Introducing%20AI.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M03</span><span class="mod-title">Introducing Generative AI</span></div>
+          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M03%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Generative%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M03%20Study%20Notes%20%E2%80%94%20Introducing%20Generative%20AI.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M04</span><span class="mod-title">Using Prompts and Prompt Engineering</span></div>
+          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M04%20Cheat%20Sheet%20%E2%80%94%20Using%20Prompts%20and%20Prompt%20Engineering.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M04%20Study%20Notes%20%E2%80%94%20Using%20Prompts%20and%20Prompt%20Engineering.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M05</span><span class="mod-title">Working with Foundation Models</span></div>
+          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M05%20Cheat%20Sheet%20%E2%80%94%20Working%20with%20Foundation%20Models.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M05%20Study%20Notes%20%E2%80%94%20Working%20with%20Foundation%20Models.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M06</span><span class="mod-title">Practicing Generative AI Responsibly</span></div>
+          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M06%20Cheat%20Sheet%20%E2%80%94%20Practicing%20Generative%20AI%20Responsibly.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M06%20Study%20Notes%20%E2%80%94%20Practicing%20Generative%20AI%20Responsibly.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M07</span><span class="mod-title">Considering Security, Governance, and Compliance</span></div>
+          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M07%20Cheat%20Sheet%20%E2%80%94%20Considering%20Security%2C%20Governance%2C%20and%20Compliance.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M07%20Study%20Notes%20%E2%80%94%20Considering%20Security%2C%20Governance%2C%20and%20Compliance.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M08</span><span class="mod-title">Implementing Generative AI</span></div>
+          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M08%20Cheat%20Sheet%20%E2%80%94%20Implementing%20Generative%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M08%20Study%20Notes%20%E2%80%94%20Implementing%20Generative%20AI.pdf">Study Notes</a></div>
+        </li>
+        <li class="mod">
+          <div class="mod-head"><span class="badge">M09</span><span class="mod-title">Bridging to Certification</span></div>
+          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M09%20Cheat%20Sheet%20%E2%80%94%20Bridging%20to%20Certification.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M09%20Study%20Notes%20%E2%80%94%20Bridging%20to%20Certification.pdf">Study Notes</a></div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      Authored study materials — distilled from the course decks, not verbatim AWS content.
+      For personal study use. &nbsp;·&nbsp; Source: <a href="https://github.com/frazier-at-cpcc/AWS-Study-Materials">github.com/frazier-at-cpcc/AWS-Study-Materials</a>
+    </div>
+  </footer>
+</body>
+</html>
