@@ -1,6 +1,6 @@
 # AWS Study Materials
 
-Condensed **study notes** and printable **cheat sheets** for five AWS Academy courses —
+Condensed **study notes** and printable **cheat sheets** for six AWS Academy courses —
 one of each per module, built for fast review and exam readiness.
 
 **📖 Browse online:** https://frazier-at-cpcc.github.io/AWS-Study-Materials/
@@ -38,6 +38,11 @@ Language Processing · Introducing Generative AI
 Data Center Basics · Physical Infrastructure (Overview, Space, Power, Cooling) · Electrical
 Fundamentals · Batteries · Generators · Fire Protection · Racks · Maintenance · Reliability ·
 Availability · Efficiency · Management · Operations · Safety · Regulations
+
+### [Cloud Operations](cloud-operations/) — Modules 1–11 · Systems operations (SysOps) track
+Understanding Systems Operations · Tooling & Automation · Computing (Servers · Scaling ·
+Containers · Databases) · Networking · Storage & Archiving · Monitoring & Security ·
+Managing Resource Consumption · Automated & Repeatable Deployments
 
 ## About
 
