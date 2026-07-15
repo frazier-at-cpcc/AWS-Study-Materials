@@ -1,6 +1,6 @@
 # AWS Study Materials
 
-Condensed **study notes** and printable **cheat sheets** for three AWS Academy courses —
+Condensed **study notes** and printable **cheat sheets** for four AWS Academy courses —
 one of each per module, built for fast review and exam readiness.
 
 **📖 Browse online:** https://frazier-at-cpcc.github.io/AWS-Study-Materials/
@@ -28,6 +28,11 @@ to and Managing an Incident
 Introducing AI · Introducing Generative AI · Prompts & Prompt Engineering · Foundation
 Models · Practicing Generative AI Responsibly · Security, Governance & Compliance ·
 Implementing Generative AI · Bridging to Certification
+
+### [Machine Learning Foundations](ml-foundations/) — Modules 2–7 · Machine learning fundamentals
+Introduction to Machine Learning · Implementing a Machine Learning Pipeline with Amazon
+SageMaker · Introducing Forecasting · Introducing Computer Vision · Introducing Natural
+Language Processing · Introducing Generative AI
 
 ## About
 
