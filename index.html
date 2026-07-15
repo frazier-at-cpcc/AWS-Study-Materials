@@ -2,514 +2,375 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1D1S4WCZF2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1D1S4WCZF2');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AWS Study Materials</title>
-<meta name="description" content="Study notes and cheat sheets for AWS Academy courses — Cloud Foundations, Cloud Security Foundations, Machine Learning Foundations, and Generative AI Foundations.">
+<title>AWS Study Materials — cheat sheets &amp; study notes for 8 AWS Academy courses</title>
+<meta name="description" content="Free printable cheat sheets and study notes for 8 AWS Academy courses — Cloud Foundations, Cloud Security, Machine Learning, Generative AI, Cloud Architecting, Developing, Operations, and Engineering Operations Technician. 86 modules, 172 documents.">
+<meta name="color-scheme" content="light dark">
 <style>
-  :root {
-    --ink:#131619; --navy:#1e3a5f; --orange:#ec7211; --amber:#b35c00;
-    --paper:#ffffff; --wash:#f4f6f9; --line:#e2e6ec; --muted:#5b6672;
-  }
-  * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body {
-    margin:0; background:var(--wash); color:var(--ink);
-    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  }
-  a { color:inherit; }
-  header.hero {
-    background:linear-gradient(160deg,#1e3a5f 0%,#16304e 100%);
-    color:#fff; padding:56px 24px 48px; border-bottom:4px solid var(--orange);
-  }
-  .wrap { max-width:960px; margin:0 auto; }
-  .kicker {
-    display:inline-block; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
-    color:var(--orange); font-weight:700; margin:0 0 10px;
-  }
-  header.hero h1 { margin:0 0 12px; font-size:clamp(28px,5vw,44px); line-height:1.1; letter-spacing:-.01em; }
-  header.hero p { margin:0; max-width:60ch; color:#cdd7e3; font-size:17px; }
-  main { max-width:960px; margin:0 auto; padding:40px 24px 24px; }
-  .course {
-    background:var(--paper); border:1px solid var(--line); border-radius:14px;
-    padding:28px 28px 8px; margin:0 0 28px; box-shadow:0 1px 3px rgba(20,30,45,.05);
-  }
-  .course-hd h2 { margin:0 0 4px; font-size:22px; color:var(--navy); letter-spacing:-.01em; }
-  .course-meta { margin:0 0 10px; font-size:13px; font-weight:600; color:var(--orange); letter-spacing:.02em; }
-  .course-blurb { margin:0 0 18px; color:var(--muted); font-size:15px; max-width:70ch; }
-  ul.mods { list-style:none; margin:0; padding:0; }
-  li.mod {
-    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
-    padding:14px 0; border-top:1px solid var(--line);
-  }
-  .mod-head { display:flex; align-items:center; gap:14px; min-width:0; }
-  .badge {
-    flex:none; display:inline-grid; place-items:center; width:44px; height:32px;
-    background:var(--navy); color:#fff; font-weight:700; font-size:13px;
-    border-radius:7px; letter-spacing:.02em;
-  }
-  .mod-title { font-weight:600; font-size:15.5px; }
-  .docs { display:flex; gap:8px; flex:none; }
-  a.doc {
-    text-decoration:none; font-size:13px; font-weight:600; padding:8px 14px;
-    border-radius:8px; border:1px solid transparent; white-space:nowrap; transition:.15s;
-  }
-  a.doc.cheat { background:#fff4ea; color:var(--amber); border-color:#f6d9bd; }
-  a.doc.cheat:hover { background:var(--orange); color:#fff; border-color:var(--orange); }
-  a.doc.notes { background:#eef3f9; color:var(--navy); border-color:#d3e0ee; }
-  a.doc.notes:hover { background:var(--navy); color:#fff; border-color:var(--navy); }
-  footer {
-    max-width:960px; margin:0 auto; padding:24px; color:var(--muted); font-size:13px;
-    border-top:1px solid var(--line);
-  }
-  footer a { color:var(--navy); font-weight:600; text-decoration:none; }
-  footer a:hover { text-decoration:underline; }
-  @media (max-width:560px) {
-    li.mod { align-items:flex-start; }
-    .docs { width:100%; }
-    a.doc { flex:1; text-align:center; }
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --paper:#161b22; --wash:#0d1117; --line:#293240; --ink:#e6edf3; --muted:#9aa7b4; }
-    body { color:var(--ink); }
-    .course { box-shadow:none; }
-    .course-hd h2 { color:#8ab4e8; }
-    .badge { background:#274060; }
-    a.doc.cheat { background:#3a2a18; color:#f0a35e; border-color:#5a3f22; }
-    a.doc.notes { background:#1c2b3f; color:#9ec5f0; border-color:#2c4258; }
-  }
+:root{
+  --ink:#14181c;--navy:#1e3a5f;--navy2:#16304e;--orange:#ec7211;--amber:#b35c00;
+  --paper:#fff;--panel:#fff;--wash:#f5f7fa;--line:#e4e8ee;--muted:#5b6672;--faint:#8b96a3;
+  --found:#1e3a5f;--assoc:#ec7211;--dc:#0e7c86;
+  --serif:Charter,"Iowan Old Style",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--wash);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--navy);padding:10px 14px;z-index:60;border-radius:8px}
+.skip:focus{left:12px;top:12px}
+
+.masthead{background:linear-gradient(155deg,#1e3a5f,#16304e 72%);color:#fff;border-bottom:4px solid var(--orange);padding:54px 0 42px}
+.mast-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#f0a35e;font-weight:600}
+.mast-title{font-family:var(--serif);font-weight:700;font-size:clamp(34px,6vw,58px);line-height:1.02;letter-spacing:-.015em;margin:12px 0 0}
+.mast-sub{margin:14px 0 0;max-width:66ch;color:#c9d6e5;font-size:16.5px}
+.mast-stats{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:28px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#9fb3cc;align-items:baseline}
+.mast-stats span{display:inline-flex;align-items:baseline;gap:9px}
+.mast-stats b{font-family:var(--serif);font-size:30px;color:#fff;letter-spacing:0}
+.mast-legend{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:26px;font-size:13px;line-height:1.4;color:#aebfd4}
+.legend{display:flex;align-items:flex-start;gap:9px;max-width:46ch}
+.legend .dot{flex:none;width:11px;height:11px;border-radius:3px;margin-top:4px}
+.legend.cheat .dot{background:var(--orange)}
+.legend.notes .dot{background:#7fb0e8}
+.legend b{color:#eaf1f8}
+
+.directory{background:var(--paper);border-bottom:1px solid var(--line)}
+.dir-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:24px 24px 26px}
+.dir-col{padding:0 24px;border-left:1px solid var(--line)}
+.dir-col:first-child{border-left:0;padding-left:0}
+.dir-label{margin:0 0 8px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);display:flex;justify-content:space-between;align-items:baseline;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.dir-col.t-foundational .dir-label{border-color:var(--found)}
+.dir-col.t-associate .dir-label{border-color:var(--assoc)}
+.dir-col.t-datacenter .dir-label{border-color:var(--dc)}
+.dir-label b{color:var(--ink);font-weight:700}
+.dir-link{display:flex;justify-content:space-between;align-items:baseline;gap:10px;text-decoration:none;padding:6px 0;font-weight:600;font-size:14.5px;color:var(--ink)}
+.dir-link span{font-family:var(--mono);font-size:12px;color:var(--faint)}
+.dir-link:hover{color:var(--orange)}
+.dir-link:hover span{color:var(--orange)}
+
+.toolbar{position:sticky;top:0;z-index:40;background:rgba(245,247,250,.9);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.tb-inner{display:flex;gap:12px;align-items:center;padding:12px 24px;flex-wrap:wrap}
+.search{position:relative;flex:1 1 300px;min-width:200px}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--faint);pointer-events:none}
+.search input{width:100%;font-family:var(--sans);font-size:15px;padding:11px 14px 11px 38px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
+.search input::placeholder{color:var(--faint)}
+.search input:focus{outline:2px solid var(--orange);outline-offset:1px;border-color:var(--orange)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:12px;letter-spacing:.03em;text-transform:uppercase;padding:9px 13px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--muted);cursor:pointer;font-weight:600}
+.chip:hover{border-color:var(--navy);color:var(--navy)}
+.chip.is-on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.tb-count{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--faint);margin-left:auto;white-space:nowrap}
+
+main{padding-top:10px;padding-bottom:8px}
+.noresults{padding:44px 0;color:var(--muted);font-size:16px}
+.linkbtn{background:none;border:0;color:var(--orange);font:inherit;font-weight:600;cursor:pointer;text-decoration:underline;padding:0}
+.track{margin-top:30px}
+.track.hide{display:none}
+.track-head{display:flex;align-items:baseline;gap:14px;margin:0 0 18px;padding-bottom:9px;border-bottom:2px solid var(--ink)}
+.track-head h2{font-family:var(--serif);font-size:25px;margin:0;letter-spacing:-.01em;font-weight:700}
+.track-count{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
+.track[data-track=foundational] .track-head{border-color:var(--found)}
+.track[data-track=associate] .track-head{border-color:var(--assoc)}
+.track[data-track=datacenter] .track-head{border-color:var(--dc)}
+
+.course{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px 26px 12px;margin:0 0 20px;box-shadow:0 1px 2px rgba(20,30,45,.04);scroll-margin-top:76px}
+.course.hide{display:none}
+.course-hd{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:8px}
+.course-hd h2{font-family:var(--serif);font-size:21px;color:var(--navy);margin:0;letter-spacing:-.01em;font-weight:700}
+.course-meta{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--orange);font-weight:600;margin:0}
+.course-blurb{flex-basis:100%;margin:4px 0 14px;color:var(--muted);font-size:14.5px;max-width:80ch}
+ul.mods{list-style:none;margin:0;padding:0}
+li.mod{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-top:1px solid var(--line)}
+li.mod.hide{display:none}
+.mod-head{display:flex;align-items:center;gap:14px;min-width:0}
+.badge{flex:none;display:inline-grid;place-items:center;width:42px;height:30px;background:var(--navy);color:#fff;font-family:var(--mono);font-weight:600;font-size:12px;border-radius:7px}
+.mod-title{font-weight:600;font-size:15px}
+.docs{display:flex;gap:8px;flex:none}
+a.doc{text-decoration:none;font-family:var(--mono);font-size:11px;letter-spacing:.03em;font-weight:600;text-transform:uppercase;padding:8px 13px;border-radius:8px;border:1px solid transparent;white-space:nowrap;transition:background .15s,color .15s,border-color .15s}
+a.doc.cheat{background:#fff3e9;color:var(--amber);border-color:#f4d6b8}
+a.doc.cheat:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
+a.doc.notes{background:#eef3f9;color:var(--navy);border-color:#d3e0ee}
+a.doc.notes:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+a.doc:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+
+footer{border-top:1px solid var(--line);margin-top:30px}
+footer .wrap{padding-top:24px;padding-bottom:40px;color:var(--muted);font-size:13px}
+footer a{color:var(--navy);font-weight:600;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.foot-mono{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:10px}
+
+@media (max-width:820px){
+  .dir-grid{grid-template-columns:1fr;gap:20px;padding:22px 24px}
+  .dir-col{border-left:0;padding:0}
+}
+@media (max-width:560px){
+  li.mod{align-items:flex-start}
+  .docs{width:100%}
+  a.doc{flex:1;text-align:center}
+  .tb-count{display:none}
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#151b23;--panel:#161d27;--wash:#0d1117;--line:#28313d;--ink:#e6edf3;--muted:#9aa7b4;--faint:#74818f;--found:#4f79ad;--dc:#3fb4c0}
+  .course-hd h2{color:#8fbdf0}
+  .course{box-shadow:none}
+  .badge{background:#264063}
+  a.doc.cheat{background:#3a2a18;color:#f0a35e;border-color:#5a3f22}
+  a.doc.notes{background:#182739;color:#9ec5f0;border-color:#294057}
+  .toolbar{background:rgba(13,17,23,.9)}
+  .search input{background:#0f151d}
+  .chip{background:#161d27}
+  .chip.is-on{background:#33517a;border-color:#33517a;color:#fff}
+  .track-head{border-color:#e6edf3}
+  .dir-label b{color:#e6edf3}
+}
 </style>
 </head>
 <body>
-  <header class="hero">
+  <a class="skip" href="#browse">Skip to courses</a>
+  <header class="masthead">
     <div class="wrap">
-      <span class="kicker">AWS Academy · Exam Prep</span>
-      <h1>AWS Study Materials</h1>
-      <p>Condensed study notes and printable cheat sheets for AWS Academy courses — one of each per module, built for fast review and exam readiness.</p>
+      <span class="mast-kicker">AWS Academy · Exam Prep</span>
+      <h1 class="mast-title">AWS Study Materials</h1>
+      <p class="mast-sub">Two documents for every module across 8 AWS Academy courses — a dense printable cheat sheet and a full-coverage study-notes companion, distilled from the course decks for fast review and exam readiness.</p>
+      <div class="mast-stats">
+        <span><b>8</b> courses</span>
+        <span><b>86</b> modules</span>
+        <span><b>172</b> documents</span>
+      </div>
+      <div class="mast-legend">
+        <span class="legend cheat"><span class="dot"></span><span><b>Cheat Sheet</b> — 2–3-page datasheet: must-know facts, key terms, comparison tables, exam traps, and a self-quiz.</span></span>
+        <span class="legend notes"><span class="dot"></span><span><b>Study Notes</b> — textbook-style, full section-by-section coverage with key concepts, worked examples, and review questions.</span></span>
+      </div>
     </div>
   </header>
-  <main>
-    <section class="course">
-      <div class="course-hd">
-        <h2>AWS Academy Cloud Foundations</h2>
-        <p class="course-meta">Modules 1–10 · Cloud Practitioner track</p>
-        <p class="course-blurb">Foundational AWS concepts: the cloud, economics &amp; billing, global infrastructure, security, networking, compute, storage, databases, architecture, and scaling.</p>
+
+  <nav class="directory" aria-label="Course directory">
+    <div class="wrap dir-grid">
+<div class="dir-col t-foundational"><p class="dir-label"><b>Foundational</b><span>30 modules</span></p><a class="dir-link" href="#cloud-foundations">Cloud Foundations<span>10</span></a><a class="dir-link" href="#cloud-security-foundations">Cloud Security<span>6</span></a><a class="dir-link" href="#ml-foundations">Machine Learning<span>6</span></a><a class="dir-link" href="#generative-ai-foundations">Generative AI<span>8</span></a></div>
+<div class="dir-col t-associate"><p class="dir-label"><b>Associate</b><span>38 modules</span></p><a class="dir-link" href="#cloud-architecting">Cloud Architecting<span>15</span></a><a class="dir-link" href="#cloud-developing">Cloud Developing<span>12</span></a><a class="dir-link" href="#cloud-operations">Cloud Operations<span>11</span></a></div>
+<div class="dir-col t-datacenter"><p class="dir-label"><b>Data Center</b><span>18 modules</span></p><a class="dir-link" href="#engineering-operations-technician">Engineering Ops<span>18</span></a></div>
+    </div>
+  </nav>
+
+  <div class="toolbar" id="browse">
+    <div class="wrap tb-inner">
+      <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input id="q" type="search" autocomplete="off" placeholder="Search 86 modules — try &ldquo;Lambda&rdquo;, &ldquo;IAM&rdquo;, &ldquo;cooling&rdquo;, &ldquo;DynamoDB&rdquo;&hellip;" aria-label="Search modules"></label>
+      <div class="chips" role="group" aria-label="Filter by track">
+        <button class="chip is-on" data-track="all">All</button>
+        <button class="chip" data-track="foundational">Foundational</button>
+        <button class="chip" data-track="associate">Associate</button>
+        <button class="chip" data-track="datacenter">Data Center</button>
       </div>
-      <ul class="mods">
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M01</span><span class="mod-title">Cloud Concepts Overview</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-foundations/M01%20Cheat%20Sheet%20%E2%80%94%20Cloud%20Concepts%20Overview.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M01%20Study%20Notes%20%E2%80%94%20Cloud%20Concepts%20Overview.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M02</span><span class="mod-title">Cloud Economics and Billing</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-foundations/M02%20Cheat%20Sheet%20%E2%80%94%20Cloud%20Economics%20and%20Billing.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M02%20Study%20Notes%20%E2%80%94%20Cloud%20Economics%20and%20Billing.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M03</span><span class="mod-title">AWS Global Infrastructure Overview</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-foundations/M03%20Cheat%20Sheet%20%E2%80%94%20AWS%20Global%20Infrastructure%20Overview.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M03%20Study%20Notes%20%E2%80%94%20AWS%20Global%20Infrastructure%20Overview.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M04</span><span class="mod-title">AWS Cloud Security</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-foundations/M04%20Cheat%20Sheet%20%E2%80%94%20AWS%20Cloud%20Security.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M04%20Study%20Notes%20%E2%80%94%20AWS%20Cloud%20Security.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M05</span><span class="mod-title">Networking and Content Delivery</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-foundations/M05%20Cheat%20Sheet%20%E2%80%94%20Networking%20and%20Content%20Delivery.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M05%20Study%20Notes%20%E2%80%94%20Networking%20and%20Content%20Delivery.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M06</span><span class="mod-title">Compute</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-foundations/M06%20Cheat%20Sheet%20%E2%80%94%20Compute.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M06%20Study%20Notes%20%E2%80%94%20Compute.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M07</span><span class="mod-title">Storage</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-foundations/M07%20Cheat%20Sheet%20%E2%80%94%20Storage.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M07%20Study%20Notes%20%E2%80%94%20Storage.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M08</span><span class="mod-title">Databases</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-foundations/M08%20Cheat%20Sheet%20%E2%80%94%20Databases.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M08%20Study%20Notes%20%E2%80%94%20Databases.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M09</span><span class="mod-title">Cloud Architecture</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-foundations/M09%20Cheat%20Sheet%20%E2%80%94%20Cloud%20Architecture.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M09%20Study%20Notes%20%E2%80%94%20Cloud%20Architecture.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M10</span><span class="mod-title">Automatic Scaling and Monitoring</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-foundations/M10%20Cheat%20Sheet%20%E2%80%94%20Automatic%20Scaling%20and%20Monitoring.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M10%20Study%20Notes%20%E2%80%94%20Automatic%20Scaling%20and%20Monitoring.pdf">Study Notes</a></div>
-        </li>
-      </ul>
-    </section>
-    <section class="course">
-      <div class="course-hd">
-        <h2>AWS Academy Cloud Security Foundations</h2>
-        <p class="course-meta">Modules 2–7 · Cloud security fundamentals</p>
-        <p class="course-blurb">Core AWS security: the shared responsibility model, IAM &amp; access control, infrastructure &amp; network security, data protection &amp; encryption, logging &amp; monitoring, and incident response.</p>
-      </div>
-      <ul class="mods">
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introduction to Security on AWS</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-security-foundations/M02%20Cheat%20Sheet%20%E2%80%94%20Introduction%20to%20Security%20on%20AWS.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M02%20Study%20Notes%20%E2%80%94%20Introduction%20to%20Security%20on%20AWS.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M03</span><span class="mod-title">Securing Access to Cloud Resources</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-security-foundations/M03%20Cheat%20Sheet%20%E2%80%94%20Securing%20Access%20to%20Cloud%20Resources.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M03%20Study%20Notes%20%E2%80%94%20Securing%20Access%20to%20Cloud%20Resources.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M04</span><span class="mod-title">Securing Your Infrastructure</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-security-foundations/M04%20Cheat%20Sheet%20%E2%80%94%20Securing%20Your%20Infrastructure.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M04%20Study%20Notes%20%E2%80%94%20Securing%20Your%20Infrastructure.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M05</span><span class="mod-title">Protecting Data in Your Application</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-security-foundations/M05%20Cheat%20Sheet%20%E2%80%94%20Protecting%20Data%20in%20Your%20Application.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M05%20Study%20Notes%20%E2%80%94%20Protecting%20Data%20in%20Your%20Application.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M06</span><span class="mod-title">Logging and Monitoring</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-security-foundations/M06%20Cheat%20Sheet%20%E2%80%94%20Logging%20and%20Monitoring.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M06%20Study%20Notes%20%E2%80%94%20Logging%20and%20Monitoring.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M07</span><span class="mod-title">Responding to and Managing an Incident</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-security-foundations/M07%20Cheat%20Sheet%20%E2%80%94%20Responding%20to%20and%20Managing%20an%20Incident.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M07%20Study%20Notes%20%E2%80%94%20Responding%20to%20and%20Managing%20an%20Incident.pdf">Study Notes</a></div>
-        </li>
-      </ul>
-    </section>
-    <section class="course">
-      <div class="course-hd">
-        <h2>AWS Academy Generative AI Foundations</h2>
-        <p class="course-meta">Modules 2–9 · AI Practitioner track</p>
-        <p class="course-blurb">Generative AI on AWS: foundational AI, generative models, prompt engineering, foundation models, responsible AI, security &amp; governance, implementation, and certification.</p>
-      </div>
-      <ul class="mods">
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introducing AI</span></div>
-          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M02%20Cheat%20Sheet%20%E2%80%94%20Introducing%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M02%20Study%20Notes%20%E2%80%94%20Introducing%20AI.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M03</span><span class="mod-title">Introducing Generative AI</span></div>
-          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M03%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Generative%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M03%20Study%20Notes%20%E2%80%94%20Introducing%20Generative%20AI.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M04</span><span class="mod-title">Using Prompts and Prompt Engineering</span></div>
-          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M04%20Cheat%20Sheet%20%E2%80%94%20Using%20Prompts%20and%20Prompt%20Engineering.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M04%20Study%20Notes%20%E2%80%94%20Using%20Prompts%20and%20Prompt%20Engineering.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M05</span><span class="mod-title">Working with Foundation Models</span></div>
-          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M05%20Cheat%20Sheet%20%E2%80%94%20Working%20with%20Foundation%20Models.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M05%20Study%20Notes%20%E2%80%94%20Working%20with%20Foundation%20Models.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M06</span><span class="mod-title">Practicing Generative AI Responsibly</span></div>
-          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M06%20Cheat%20Sheet%20%E2%80%94%20Practicing%20Generative%20AI%20Responsibly.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M06%20Study%20Notes%20%E2%80%94%20Practicing%20Generative%20AI%20Responsibly.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M07</span><span class="mod-title">Considering Security, Governance, and Compliance</span></div>
-          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M07%20Cheat%20Sheet%20%E2%80%94%20Considering%20Security%2C%20Governance%2C%20and%20Compliance.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M07%20Study%20Notes%20%E2%80%94%20Considering%20Security%2C%20Governance%2C%20and%20Compliance.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M08</span><span class="mod-title">Implementing Generative AI</span></div>
-          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M08%20Cheat%20Sheet%20%E2%80%94%20Implementing%20Generative%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M08%20Study%20Notes%20%E2%80%94%20Implementing%20Generative%20AI.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M09</span><span class="mod-title">Bridging to Certification</span></div>
-          <div class="docs"><a class="doc cheat" href="generative-ai-foundations/M09%20Cheat%20Sheet%20%E2%80%94%20Bridging%20to%20Certification.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M09%20Study%20Notes%20%E2%80%94%20Bridging%20to%20Certification.pdf">Study Notes</a></div>
-        </li>
-      </ul>
-    </section>
-    <section class="course">
-      <div class="course-hd">
-        <h2>AWS Academy Machine Learning Foundations</h2>
-        <p class="course-meta">Modules 2–7 · Machine learning fundamentals</p>
-        <p class="course-blurb">Applied machine learning on AWS: ML concepts &amp; workflow, the Amazon SageMaker ML pipeline, forecasting, computer vision, natural language processing, and generative AI.</p>
-      </div>
-      <ul class="mods">
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introduction to Machine Learning</span></div>
-          <div class="docs"><a class="doc cheat" href="ml-foundations/M02%20Cheat%20Sheet%20%E2%80%94%20Introduction%20to%20Machine%20Learning.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M02%20Study%20Notes%20%E2%80%94%20Introduction%20to%20Machine%20Learning.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M03</span><span class="mod-title">Implementing a Machine Learning Pipeline with Amazon SageMaker</span></div>
-          <div class="docs"><a class="doc cheat" href="ml-foundations/M03%20Cheat%20Sheet%20%E2%80%94%20Implementing%20a%20Machine%20Learning%20Pipeline%20with%20Amazon%20SageMaker.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M03%20Study%20Notes%20%E2%80%94%20Implementing%20a%20Machine%20Learning%20Pipeline%20with%20Amazon%20SageMaker.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M04</span><span class="mod-title">Introducing Forecasting</span></div>
-          <div class="docs"><a class="doc cheat" href="ml-foundations/M04%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Forecasting.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M04%20Study%20Notes%20%E2%80%94%20Introducing%20Forecasting.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M05</span><span class="mod-title">Introducing Computer Vision</span></div>
-          <div class="docs"><a class="doc cheat" href="ml-foundations/M05%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Computer%20Vision.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M05%20Study%20Notes%20%E2%80%94%20Introducing%20Computer%20Vision.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M06</span><span class="mod-title">Introducing Natural Language Processing</span></div>
-          <div class="docs"><a class="doc cheat" href="ml-foundations/M06%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Natural%20Language%20Processing.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M06%20Study%20Notes%20%E2%80%94%20Introducing%20Natural%20Language%20Processing.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M07</span><span class="mod-title">Introducing Generative AI</span></div>
-          <div class="docs"><a class="doc cheat" href="ml-foundations/M07%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Generative%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M07%20Study%20Notes%20%E2%80%94%20Introducing%20Generative%20AI.pdf">Study Notes</a></div>
-        </li>
-      </ul>
-    </section>
-    <section class="course">
-      <div class="course-hd">
-        <h2>AWS Academy Engineering Operations Technician</h2>
-        <p class="course-meta">Modules 1–18 · Data center facilities &amp; operations</p>
-        <p class="course-blurb">The physical data center end to end: electrical &amp; power systems, batteries &amp; generators, cooling &amp; fire protection, racks &amp; space, plus reliability, availability, efficiency, operations, safety, and regulations.</p>
-      </div>
-      <ul class="mods">
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M01</span><span class="mod-title">Data Center Basics</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M01%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Basics.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M01%20Study%20Notes%20%E2%80%94%20Data%20Center%20Basics.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M02</span><span class="mod-title">Data Center Physical Infrastructure - Overview</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M02%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Overview.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M02%20Study%20Notes%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Overview.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M03</span><span class="mod-title">Data Center Physical Infrastructure - Space</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M03%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Space.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M03%20Study%20Notes%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Space.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M04</span><span class="mod-title">Electrical Fundamentals</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M04%20Cheat%20Sheet%20%E2%80%94%20Electrical%20Fundamentals.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M04%20Study%20Notes%20%E2%80%94%20Electrical%20Fundamentals.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M05</span><span class="mod-title">Data Center Physical Infrastructure - Power</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M05%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Power.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M05%20Study%20Notes%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Power.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M06</span><span class="mod-title">Data Center Battery Overview</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M06%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Battery%20Overview.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M06%20Study%20Notes%20%E2%80%94%20Data%20Center%20Battery%20Overview.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M07</span><span class="mod-title">Data Center Generators</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M07%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Generators.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M07%20Study%20Notes%20%E2%80%94%20Data%20Center%20Generators.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M08</span><span class="mod-title">Data Center Physical Infrastructure - Cooling</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M08%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Cooling.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M08%20Study%20Notes%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Cooling.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M09</span><span class="mod-title">Fire Protection in the Data Center</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M09%20Cheat%20Sheet%20%E2%80%94%20Fire%20Protection%20in%20the%20Data%20Center.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M09%20Study%20Notes%20%E2%80%94%20Fire%20Protection%20in%20the%20Data%20Center.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M10</span><span class="mod-title">Data Center Racks</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M10%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Racks.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M10%20Study%20Notes%20%E2%80%94%20Data%20Center%20Racks.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M11</span><span class="mod-title">Data Center Maintenance</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M11%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Maintenance.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M11%20Study%20Notes%20%E2%80%94%20Data%20Center%20Maintenance.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M12</span><span class="mod-title">Data Center Reliability</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M12%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Reliability.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M12%20Study%20Notes%20%E2%80%94%20Data%20Center%20Reliability.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M13</span><span class="mod-title">Data Center Availability</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M13%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Availability.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M13%20Study%20Notes%20%E2%80%94%20Data%20Center%20Availability.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M14</span><span class="mod-title">Data Center Efficiency</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M14%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Efficiency.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M14%20Study%20Notes%20%E2%80%94%20Data%20Center%20Efficiency.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M15</span><span class="mod-title">Managing Data Centers</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M15%20Cheat%20Sheet%20%E2%80%94%20Managing%20Data%20Centers.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M15%20Study%20Notes%20%E2%80%94%20Managing%20Data%20Centers.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M16</span><span class="mod-title">Data Center Operations</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M16%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Operations.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M16%20Study%20Notes%20%E2%80%94%20Data%20Center%20Operations.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M17</span><span class="mod-title">Safety Considerations in the Data Center</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M17%20Cheat%20Sheet%20%E2%80%94%20Safety%20Considerations%20in%20the%20Data%20Center.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M17%20Study%20Notes%20%E2%80%94%20Safety%20Considerations%20in%20the%20Data%20Center.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M18</span><span class="mod-title">Data Center Regulations</span></div>
-          <div class="docs"><a class="doc cheat" href="engineering-operations-technician/M18%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Regulations.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M18%20Study%20Notes%20%E2%80%94%20Data%20Center%20Regulations.pdf">Study Notes</a></div>
-        </li>
-      </ul>
-    </section>
-    <section class="course">
-      <div class="course-hd">
-        <h2>AWS Academy Cloud Operations</h2>
-        <p class="course-meta">Modules 1–11 · Systems operations (SysOps) track</p>
-        <p class="course-blurb">Operating workloads on AWS: tooling &amp; automation, compute (servers, scaling, containers, databases), networking, storage &amp; archiving, monitoring &amp; security, cost management, and automated deployments.</p>
-      </div>
-      <ul class="mods">
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M01</span><span class="mod-title">Understanding Systems Operations on AWS</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M01%20Cheat%20Sheet%20%E2%80%94%20Understanding%20Systems%20Operations%20on%20AWS.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M01%20Study%20Notes%20%E2%80%94%20Understanding%20Systems%20Operations%20on%20AWS.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M02</span><span class="mod-title">Tooling and Automation</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M02%20Cheat%20Sheet%20%E2%80%94%20Tooling%20and%20Automation.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M02%20Study%20Notes%20%E2%80%94%20Tooling%20and%20Automation.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M03</span><span class="mod-title">Computing (Servers)</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M03%20Cheat%20Sheet%20%E2%80%94%20Computing%20%28Servers%29.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M03%20Study%20Notes%20%E2%80%94%20Computing%20%28Servers%29.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M04</span><span class="mod-title">Computing (Scaling and Name Resolution)</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M04%20Cheat%20Sheet%20%E2%80%94%20Computing%20%28Scaling%20and%20Name%20Resolution%29.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M04%20Study%20Notes%20%E2%80%94%20Computing%20%28Scaling%20and%20Name%20Resolution%29.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M05</span><span class="mod-title">Computing (Containers and Serverless)</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M05%20Cheat%20Sheet%20%E2%80%94%20Computing%20%28Containers%20and%20Serverless%29.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M05%20Study%20Notes%20%E2%80%94%20Computing%20%28Containers%20and%20Serverless%29.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M06</span><span class="mod-title">Computing (Database Services)</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M06%20Cheat%20Sheet%20%E2%80%94%20Computing%20%28Database%20Services%29.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M06%20Study%20Notes%20%E2%80%94%20Computing%20%28Database%20Services%29.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M07</span><span class="mod-title">Networking</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M07%20Cheat%20Sheet%20%E2%80%94%20Networking.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M07%20Study%20Notes%20%E2%80%94%20Networking.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M08</span><span class="mod-title">Storage and Archiving</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M08%20Cheat%20Sheet%20%E2%80%94%20Storage%20and%20Archiving.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M08%20Study%20Notes%20%E2%80%94%20Storage%20and%20Archiving.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M09</span><span class="mod-title">Monitoring and Security</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M09%20Cheat%20Sheet%20%E2%80%94%20Monitoring%20and%20Security.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M09%20Study%20Notes%20%E2%80%94%20Monitoring%20and%20Security.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M10</span><span class="mod-title">Managing Resource Consumption</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M10%20Cheat%20Sheet%20%E2%80%94%20Managing%20Resource%20Consumption.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M10%20Study%20Notes%20%E2%80%94%20Managing%20Resource%20Consumption.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M11</span><span class="mod-title">Creating Automated and Repeatable Deployments</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-operations/M11%20Cheat%20Sheet%20%E2%80%94%20Creating%20Automated%20and%20Repeatable%20Deployments.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M11%20Study%20Notes%20%E2%80%94%20Creating%20Automated%20and%20Repeatable%20Deployments.pdf">Study Notes</a></div>
-        </li>
-      </ul>
-    </section>
-    <section class="course">
-      <div class="course-hd">
-        <h2>AWS Academy Cloud Developing</h2>
-        <p class="course-meta">Modules 2–13 · Developer associate track</p>
-        <p class="course-blurb">Building applications on AWS with the SDKs: S3, IAM, DynamoDB, API Gateway REST APIs, Lambda &amp; event-driven serverless, containers, caching, messaging (SQS/SNS), Step Functions, Cognito security, and CI/CD pipelines.</p>
-      </div>
-      <ul class="mods">
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introduction to Developing on AWS</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M02%20Cheat%20Sheet%20%E2%80%94%20Introduction%20to%20Developing%20on%20AWS.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M02%20Study%20Notes%20%E2%80%94%20Introduction%20to%20Developing%20on%20AWS.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M03</span><span class="mod-title">Developing Storage Solutions</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M03%20Cheat%20Sheet%20%E2%80%94%20Developing%20Storage%20Solutions.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M03%20Study%20Notes%20%E2%80%94%20Developing%20Storage%20Solutions.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M04</span><span class="mod-title">Securing Access to Cloud Resources</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M04%20Cheat%20Sheet%20%E2%80%94%20Securing%20Access%20to%20Cloud%20Resources.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M04%20Study%20Notes%20%E2%80%94%20Securing%20Access%20to%20Cloud%20Resources.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M05</span><span class="mod-title">Developing Flexible NoSQL Solutions</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M05%20Cheat%20Sheet%20%E2%80%94%20Developing%20Flexible%20NoSQL%20Solutions.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M05%20Study%20Notes%20%E2%80%94%20Developing%20Flexible%20NoSQL%20Solutions.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M06</span><span class="mod-title">Developing REST APIs</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M06%20Cheat%20Sheet%20%E2%80%94%20Developing%20REST%20APIs.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M06%20Study%20Notes%20%E2%80%94%20Developing%20REST%20APIs.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M07</span><span class="mod-title">Developing Event-Driven Serverless Solutions</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M07%20Cheat%20Sheet%20%E2%80%94%20Developing%20Event-Driven%20Serverless%20Solutions.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M07%20Study%20Notes%20%E2%80%94%20Developing%20Event-Driven%20Serverless%20Solutions.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M08</span><span class="mod-title">Introducing Containers and Container Services</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M08%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Containers%20and%20Container%20Services.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M08%20Study%20Notes%20%E2%80%94%20Introducing%20Containers%20and%20Container%20Services.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M09</span><span class="mod-title">Caching Information for Scalability</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M09%20Cheat%20Sheet%20%E2%80%94%20Caching%20Information%20for%20Scalability.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M09%20Study%20Notes%20%E2%80%94%20Caching%20Information%20for%20Scalability.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M10</span><span class="mod-title">Developing with Messaging Services</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M10%20Cheat%20Sheet%20%E2%80%94%20Developing%20with%20Messaging%20Services.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M10%20Study%20Notes%20%E2%80%94%20Developing%20with%20Messaging%20Services.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M11</span><span class="mod-title">Defining Workflows to Orchestrate Functions</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M11%20Cheat%20Sheet%20%E2%80%94%20Defining%20Workflows%20to%20Orchestrate%20Functions.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M11%20Study%20Notes%20%E2%80%94%20Defining%20Workflows%20to%20Orchestrate%20Functions.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M12</span><span class="mod-title">Developing Secure Applications on AWS</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M12%20Cheat%20Sheet%20%E2%80%94%20Developing%20Secure%20Applications%20on%20AWS.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M12%20Study%20Notes%20%E2%80%94%20Developing%20Secure%20Applications%20on%20AWS.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M13</span><span class="mod-title">Automating Deployment Using CI/CD Pipelines</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-developing/M13%20Cheat%20Sheet%20%E2%80%94%20Automating%20Deployment%20Using%20CI-CD%20Pipelines.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M13%20Study%20Notes%20%E2%80%94%20Automating%20Deployment%20Using%20CI-CD%20Pipelines.pdf">Study Notes</a></div>
-        </li>
-      </ul>
-    </section>
-    <section class="course">
-      <div class="course-hd">
-        <h2>AWS Academy Cloud Architecting</h2>
-        <p class="course-meta">Modules 2–16 · Solutions Architect associate track</p>
-        <p class="course-blurb">Designing solutions on AWS: the Well-Architected Framework, IAM, S3 storage, EC2 compute, databases, VPC networking &amp; connectivity, user/data security, monitoring &amp; high availability, automation, caching, decoupling, serverless &amp; microservices, data engineering, and disaster recovery.</p>
-      </div>
-      <ul class="mods">
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introducing Cloud Architecting</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M02%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Cloud%20Architecting.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M02%20Study%20Notes%20%E2%80%94%20Introducing%20Cloud%20Architecting.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M03</span><span class="mod-title">Securing Access</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M03%20Cheat%20Sheet%20%E2%80%94%20Securing%20Access.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M03%20Study%20Notes%20%E2%80%94%20Securing%20Access.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M04</span><span class="mod-title">Adding a Storage Layer with Amazon S3</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M04%20Cheat%20Sheet%20%E2%80%94%20Adding%20a%20Storage%20Layer%20with%20Amazon%20S3.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M04%20Study%20Notes%20%E2%80%94%20Adding%20a%20Storage%20Layer%20with%20Amazon%20S3.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M05</span><span class="mod-title">Adding a Compute Layer Using Amazon EC2</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M05%20Cheat%20Sheet%20%E2%80%94%20Adding%20a%20Compute%20Layer%20Using%20Amazon%20EC2.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M05%20Study%20Notes%20%E2%80%94%20Adding%20a%20Compute%20Layer%20Using%20Amazon%20EC2.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M06</span><span class="mod-title">Adding a Database Layer</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M06%20Cheat%20Sheet%20%E2%80%94%20Adding%20a%20Database%20Layer.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M06%20Study%20Notes%20%E2%80%94%20Adding%20a%20Database%20Layer.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M07</span><span class="mod-title">Creating a Networking Environment</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M07%20Cheat%20Sheet%20%E2%80%94%20Creating%20a%20Networking%20Environment.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M07%20Study%20Notes%20%E2%80%94%20Creating%20a%20Networking%20Environment.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M08</span><span class="mod-title">Connecting Networks</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M08%20Cheat%20Sheet%20%E2%80%94%20Connecting%20Networks.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M08%20Study%20Notes%20%E2%80%94%20Connecting%20Networks.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M09</span><span class="mod-title">Securing User, Application, and Data Access</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M09%20Cheat%20Sheet%20%E2%80%94%20Securing%20User%2C%20Application%2C%20and%20Data%20Access.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M09%20Study%20Notes%20%E2%80%94%20Securing%20User%2C%20Application%2C%20and%20Data%20Access.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M10</span><span class="mod-title">Implementing Monitoring, Elasticity, and High Availability</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M10%20Cheat%20Sheet%20%E2%80%94%20Implementing%20Monitoring%2C%20Elasticity%2C%20and%20High%20Availability.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M10%20Study%20Notes%20%E2%80%94%20Implementing%20Monitoring%2C%20Elasticity%2C%20and%20High%20Availability.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M11</span><span class="mod-title">Automating Your Architecture</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M11%20Cheat%20Sheet%20%E2%80%94%20Automating%20Your%20Architecture.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M11%20Study%20Notes%20%E2%80%94%20Automating%20Your%20Architecture.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M12</span><span class="mod-title">Caching Content</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M12%20Cheat%20Sheet%20%E2%80%94%20Caching%20Content.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M12%20Study%20Notes%20%E2%80%94%20Caching%20Content.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M13</span><span class="mod-title">Building Decoupled Architectures</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M13%20Cheat%20Sheet%20%E2%80%94%20Building%20Decoupled%20Architectures.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M13%20Study%20Notes%20%E2%80%94%20Building%20Decoupled%20Architectures.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M14</span><span class="mod-title">Building Serverless Architectures and Microservices</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M14%20Cheat%20Sheet%20%E2%80%94%20Building%20Serverless%20Architectures%20and%20Microservices.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M14%20Study%20Notes%20%E2%80%94%20Building%20Serverless%20Architectures%20and%20Microservices.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M15</span><span class="mod-title">Data Engineering Patterns</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M15%20Cheat%20Sheet%20%E2%80%94%20Data%20Engineering%20Patterns.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M15%20Study%20Notes%20%E2%80%94%20Data%20Engineering%20Patterns.pdf">Study Notes</a></div>
-        </li>
-        <li class="mod">
-          <div class="mod-head"><span class="badge">M16</span><span class="mod-title">Planning for Disaster</span></div>
-          <div class="docs"><a class="doc cheat" href="cloud-architecting/M16%20Cheat%20Sheet%20%E2%80%94%20Planning%20for%20Disaster.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M16%20Study%20Notes%20%E2%80%94%20Planning%20for%20Disaster.pdf">Study Notes</a></div>
-        </li>
-      </ul>
-    </section>
+      <span class="tb-count" id="tbcount">86 modules</span>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <p class="noresults" id="noresults" hidden>No modules match &ldquo;<span id="nrq"></span>&rdquo;. <button class="linkbtn" id="clear2">Clear search</button></p>
+<section class="track" data-track="foundational">
+  <div class="track-head"><h2>Foundational</h2><span class="track-count">4 courses · 30 modules</span></div>
+<section class="course" id="cloud-foundations" data-track="foundational">
+  <div class="course-hd"><h2>AWS Academy Cloud Foundations</h2><p class="course-meta">Modules 1–10 · Cloud Practitioner track</p><p class="course-blurb">Foundational AWS concepts: the cloud, economics &amp; billing, global infrastructure, security, networking, compute, storage, databases, architecture, and scaling.</p></div>
+  <ul class="mods">
+    <li class="mod" data-t="cloud concepts overview cloud foundations"><div class="mod-head"><span class="badge">M01</span><span class="mod-title">Cloud Concepts Overview</span></div><div class="docs"><a class="doc cheat" href="cloud-foundations/M01%20Cheat%20Sheet%20%E2%80%94%20Cloud%20Concepts%20Overview.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M01%20Study%20Notes%20%E2%80%94%20Cloud%20Concepts%20Overview.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="cloud economics and billing cloud foundations"><div class="mod-head"><span class="badge">M02</span><span class="mod-title">Cloud Economics and Billing</span></div><div class="docs"><a class="doc cheat" href="cloud-foundations/M02%20Cheat%20Sheet%20%E2%80%94%20Cloud%20Economics%20and%20Billing.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M02%20Study%20Notes%20%E2%80%94%20Cloud%20Economics%20and%20Billing.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="aws global infrastructure overview cloud foundations"><div class="mod-head"><span class="badge">M03</span><span class="mod-title">AWS Global Infrastructure Overview</span></div><div class="docs"><a class="doc cheat" href="cloud-foundations/M03%20Cheat%20Sheet%20%E2%80%94%20AWS%20Global%20Infrastructure%20Overview.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M03%20Study%20Notes%20%E2%80%94%20AWS%20Global%20Infrastructure%20Overview.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="aws cloud security cloud foundations"><div class="mod-head"><span class="badge">M04</span><span class="mod-title">AWS Cloud Security</span></div><div class="docs"><a class="doc cheat" href="cloud-foundations/M04%20Cheat%20Sheet%20%E2%80%94%20AWS%20Cloud%20Security.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M04%20Study%20Notes%20%E2%80%94%20AWS%20Cloud%20Security.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="networking and content delivery cloud foundations"><div class="mod-head"><span class="badge">M05</span><span class="mod-title">Networking and Content Delivery</span></div><div class="docs"><a class="doc cheat" href="cloud-foundations/M05%20Cheat%20Sheet%20%E2%80%94%20Networking%20and%20Content%20Delivery.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M05%20Study%20Notes%20%E2%80%94%20Networking%20and%20Content%20Delivery.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="compute cloud foundations"><div class="mod-head"><span class="badge">M06</span><span class="mod-title">Compute</span></div><div class="docs"><a class="doc cheat" href="cloud-foundations/M06%20Cheat%20Sheet%20%E2%80%94%20Compute.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M06%20Study%20Notes%20%E2%80%94%20Compute.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="storage cloud foundations"><div class="mod-head"><span class="badge">M07</span><span class="mod-title">Storage</span></div><div class="docs"><a class="doc cheat" href="cloud-foundations/M07%20Cheat%20Sheet%20%E2%80%94%20Storage.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M07%20Study%20Notes%20%E2%80%94%20Storage.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="databases cloud foundations"><div class="mod-head"><span class="badge">M08</span><span class="mod-title">Databases</span></div><div class="docs"><a class="doc cheat" href="cloud-foundations/M08%20Cheat%20Sheet%20%E2%80%94%20Databases.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M08%20Study%20Notes%20%E2%80%94%20Databases.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="cloud architecture cloud foundations"><div class="mod-head"><span class="badge">M09</span><span class="mod-title">Cloud Architecture</span></div><div class="docs"><a class="doc cheat" href="cloud-foundations/M09%20Cheat%20Sheet%20%E2%80%94%20Cloud%20Architecture.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M09%20Study%20Notes%20%E2%80%94%20Cloud%20Architecture.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="automatic scaling and monitoring cloud foundations"><div class="mod-head"><span class="badge">M10</span><span class="mod-title">Automatic Scaling and Monitoring</span></div><div class="docs"><a class="doc cheat" href="cloud-foundations/M10%20Cheat%20Sheet%20%E2%80%94%20Automatic%20Scaling%20and%20Monitoring.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-foundations/M10%20Study%20Notes%20%E2%80%94%20Automatic%20Scaling%20and%20Monitoring.pdf">Study Notes</a></div></li>
+  </ul>
+</section>
+<section class="course" id="cloud-security-foundations" data-track="foundational">
+  <div class="course-hd"><h2>AWS Academy Cloud Security Foundations</h2><p class="course-meta">Modules 2–7 · Cloud security fundamentals</p><p class="course-blurb">Core AWS security: the shared responsibility model, IAM &amp; access control, infrastructure &amp; network security, data protection &amp; encryption, logging &amp; monitoring, and incident response.</p></div>
+  <ul class="mods">
+    <li class="mod" data-t="introduction to security on aws cloud security"><div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introduction to Security on AWS</span></div><div class="docs"><a class="doc cheat" href="cloud-security-foundations/M02%20Cheat%20Sheet%20%E2%80%94%20Introduction%20to%20Security%20on%20AWS.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M02%20Study%20Notes%20%E2%80%94%20Introduction%20to%20Security%20on%20AWS.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="securing access to cloud resources cloud security"><div class="mod-head"><span class="badge">M03</span><span class="mod-title">Securing Access to Cloud Resources</span></div><div class="docs"><a class="doc cheat" href="cloud-security-foundations/M03%20Cheat%20Sheet%20%E2%80%94%20Securing%20Access%20to%20Cloud%20Resources.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M03%20Study%20Notes%20%E2%80%94%20Securing%20Access%20to%20Cloud%20Resources.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="securing your infrastructure cloud security"><div class="mod-head"><span class="badge">M04</span><span class="mod-title">Securing Your Infrastructure</span></div><div class="docs"><a class="doc cheat" href="cloud-security-foundations/M04%20Cheat%20Sheet%20%E2%80%94%20Securing%20Your%20Infrastructure.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M04%20Study%20Notes%20%E2%80%94%20Securing%20Your%20Infrastructure.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="protecting data in your application cloud security"><div class="mod-head"><span class="badge">M05</span><span class="mod-title">Protecting Data in Your Application</span></div><div class="docs"><a class="doc cheat" href="cloud-security-foundations/M05%20Cheat%20Sheet%20%E2%80%94%20Protecting%20Data%20in%20Your%20Application.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M05%20Study%20Notes%20%E2%80%94%20Protecting%20Data%20in%20Your%20Application.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="logging and monitoring cloud security"><div class="mod-head"><span class="badge">M06</span><span class="mod-title">Logging and Monitoring</span></div><div class="docs"><a class="doc cheat" href="cloud-security-foundations/M06%20Cheat%20Sheet%20%E2%80%94%20Logging%20and%20Monitoring.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M06%20Study%20Notes%20%E2%80%94%20Logging%20and%20Monitoring.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="responding to and managing an incident cloud security"><div class="mod-head"><span class="badge">M07</span><span class="mod-title">Responding to and Managing an Incident</span></div><div class="docs"><a class="doc cheat" href="cloud-security-foundations/M07%20Cheat%20Sheet%20%E2%80%94%20Responding%20to%20and%20Managing%20an%20Incident.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-security-foundations/M07%20Study%20Notes%20%E2%80%94%20Responding%20to%20and%20Managing%20an%20Incident.pdf">Study Notes</a></div></li>
+  </ul>
+</section>
+<section class="course" id="ml-foundations" data-track="foundational">
+  <div class="course-hd"><h2>AWS Academy Machine Learning Foundations</h2><p class="course-meta">Modules 2–7 · Machine learning fundamentals</p><p class="course-blurb">Applied machine learning on AWS: ML concepts &amp; workflow, the Amazon SageMaker ML pipeline, forecasting, computer vision, natural language processing, and generative AI.</p></div>
+  <ul class="mods">
+    <li class="mod" data-t="introduction to machine learning machine learning"><div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introduction to Machine Learning</span></div><div class="docs"><a class="doc cheat" href="ml-foundations/M02%20Cheat%20Sheet%20%E2%80%94%20Introduction%20to%20Machine%20Learning.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M02%20Study%20Notes%20%E2%80%94%20Introduction%20to%20Machine%20Learning.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="implementing a machine learning pipeline with amazon sagemaker machine learning"><div class="mod-head"><span class="badge">M03</span><span class="mod-title">Implementing a Machine Learning Pipeline with Amazon SageMaker</span></div><div class="docs"><a class="doc cheat" href="ml-foundations/M03%20Cheat%20Sheet%20%E2%80%94%20Implementing%20a%20Machine%20Learning%20Pipeline%20with%20Amazon%20SageMaker.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M03%20Study%20Notes%20%E2%80%94%20Implementing%20a%20Machine%20Learning%20Pipeline%20with%20Amazon%20SageMaker.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="introducing forecasting machine learning"><div class="mod-head"><span class="badge">M04</span><span class="mod-title">Introducing Forecasting</span></div><div class="docs"><a class="doc cheat" href="ml-foundations/M04%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Forecasting.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M04%20Study%20Notes%20%E2%80%94%20Introducing%20Forecasting.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="introducing computer vision machine learning"><div class="mod-head"><span class="badge">M05</span><span class="mod-title">Introducing Computer Vision</span></div><div class="docs"><a class="doc cheat" href="ml-foundations/M05%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Computer%20Vision.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M05%20Study%20Notes%20%E2%80%94%20Introducing%20Computer%20Vision.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="introducing natural language processing machine learning"><div class="mod-head"><span class="badge">M06</span><span class="mod-title">Introducing Natural Language Processing</span></div><div class="docs"><a class="doc cheat" href="ml-foundations/M06%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Natural%20Language%20Processing.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M06%20Study%20Notes%20%E2%80%94%20Introducing%20Natural%20Language%20Processing.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="introducing generative ai machine learning"><div class="mod-head"><span class="badge">M07</span><span class="mod-title">Introducing Generative AI</span></div><div class="docs"><a class="doc cheat" href="ml-foundations/M07%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Generative%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="ml-foundations/M07%20Study%20Notes%20%E2%80%94%20Introducing%20Generative%20AI.pdf">Study Notes</a></div></li>
+  </ul>
+</section>
+<section class="course" id="generative-ai-foundations" data-track="foundational">
+  <div class="course-hd"><h2>AWS Academy Generative AI Foundations</h2><p class="course-meta">Modules 2–9 · AI Practitioner track</p><p class="course-blurb">Generative AI on AWS: foundational AI, generative models, prompt engineering, foundation models, responsible AI, security &amp; governance, implementation, and certification.</p></div>
+  <ul class="mods">
+    <li class="mod" data-t="introducing ai generative ai"><div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introducing AI</span></div><div class="docs"><a class="doc cheat" href="generative-ai-foundations/M02%20Cheat%20Sheet%20%E2%80%94%20Introducing%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M02%20Study%20Notes%20%E2%80%94%20Introducing%20AI.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="introducing generative ai generative ai"><div class="mod-head"><span class="badge">M03</span><span class="mod-title">Introducing Generative AI</span></div><div class="docs"><a class="doc cheat" href="generative-ai-foundations/M03%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Generative%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M03%20Study%20Notes%20%E2%80%94%20Introducing%20Generative%20AI.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="using prompts and prompt engineering generative ai"><div class="mod-head"><span class="badge">M04</span><span class="mod-title">Using Prompts and Prompt Engineering</span></div><div class="docs"><a class="doc cheat" href="generative-ai-foundations/M04%20Cheat%20Sheet%20%E2%80%94%20Using%20Prompts%20and%20Prompt%20Engineering.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M04%20Study%20Notes%20%E2%80%94%20Using%20Prompts%20and%20Prompt%20Engineering.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="working with foundation models generative ai"><div class="mod-head"><span class="badge">M05</span><span class="mod-title">Working with Foundation Models</span></div><div class="docs"><a class="doc cheat" href="generative-ai-foundations/M05%20Cheat%20Sheet%20%E2%80%94%20Working%20with%20Foundation%20Models.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M05%20Study%20Notes%20%E2%80%94%20Working%20with%20Foundation%20Models.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="practicing generative ai responsibly generative ai"><div class="mod-head"><span class="badge">M06</span><span class="mod-title">Practicing Generative AI Responsibly</span></div><div class="docs"><a class="doc cheat" href="generative-ai-foundations/M06%20Cheat%20Sheet%20%E2%80%94%20Practicing%20Generative%20AI%20Responsibly.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M06%20Study%20Notes%20%E2%80%94%20Practicing%20Generative%20AI%20Responsibly.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="considering security, governance, and compliance generative ai"><div class="mod-head"><span class="badge">M07</span><span class="mod-title">Considering Security, Governance, and Compliance</span></div><div class="docs"><a class="doc cheat" href="generative-ai-foundations/M07%20Cheat%20Sheet%20%E2%80%94%20Considering%20Security%2C%20Governance%2C%20and%20Compliance.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M07%20Study%20Notes%20%E2%80%94%20Considering%20Security%2C%20Governance%2C%20and%20Compliance.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="implementing generative ai generative ai"><div class="mod-head"><span class="badge">M08</span><span class="mod-title">Implementing Generative AI</span></div><div class="docs"><a class="doc cheat" href="generative-ai-foundations/M08%20Cheat%20Sheet%20%E2%80%94%20Implementing%20Generative%20AI.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M08%20Study%20Notes%20%E2%80%94%20Implementing%20Generative%20AI.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="bridging to certification generative ai"><div class="mod-head"><span class="badge">M09</span><span class="mod-title">Bridging to Certification</span></div><div class="docs"><a class="doc cheat" href="generative-ai-foundations/M09%20Cheat%20Sheet%20%E2%80%94%20Bridging%20to%20Certification.pdf">Cheat Sheet</a><a class="doc notes" href="generative-ai-foundations/M09%20Study%20Notes%20%E2%80%94%20Bridging%20to%20Certification.pdf">Study Notes</a></div></li>
+  </ul>
+</section>
+</section>
+<section class="track" data-track="associate">
+  <div class="track-head"><h2>Associate</h2><span class="track-count">3 courses · 38 modules</span></div>
+<section class="course" id="cloud-architecting" data-track="associate">
+  <div class="course-hd"><h2>AWS Academy Cloud Architecting</h2><p class="course-meta">Modules 2–16 · Solutions Architect associate track</p><p class="course-blurb">Designing solutions on AWS: the Well-Architected Framework, IAM, S3 storage, EC2 compute, databases, VPC networking &amp; connectivity, user/data security, monitoring &amp; high availability, automation, caching, decoupling, serverless &amp; microservices, data engineering, and disaster recovery.</p></div>
+  <ul class="mods">
+    <li class="mod" data-t="introducing cloud architecting cloud architecting"><div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introducing Cloud Architecting</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M02%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Cloud%20Architecting.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M02%20Study%20Notes%20%E2%80%94%20Introducing%20Cloud%20Architecting.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="securing access cloud architecting"><div class="mod-head"><span class="badge">M03</span><span class="mod-title">Securing Access</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M03%20Cheat%20Sheet%20%E2%80%94%20Securing%20Access.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M03%20Study%20Notes%20%E2%80%94%20Securing%20Access.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="adding a storage layer with amazon s3 cloud architecting"><div class="mod-head"><span class="badge">M04</span><span class="mod-title">Adding a Storage Layer with Amazon S3</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M04%20Cheat%20Sheet%20%E2%80%94%20Adding%20a%20Storage%20Layer%20with%20Amazon%20S3.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M04%20Study%20Notes%20%E2%80%94%20Adding%20a%20Storage%20Layer%20with%20Amazon%20S3.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="adding a compute layer using amazon ec2 cloud architecting"><div class="mod-head"><span class="badge">M05</span><span class="mod-title">Adding a Compute Layer Using Amazon EC2</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M05%20Cheat%20Sheet%20%E2%80%94%20Adding%20a%20Compute%20Layer%20Using%20Amazon%20EC2.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M05%20Study%20Notes%20%E2%80%94%20Adding%20a%20Compute%20Layer%20Using%20Amazon%20EC2.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="adding a database layer cloud architecting"><div class="mod-head"><span class="badge">M06</span><span class="mod-title">Adding a Database Layer</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M06%20Cheat%20Sheet%20%E2%80%94%20Adding%20a%20Database%20Layer.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M06%20Study%20Notes%20%E2%80%94%20Adding%20a%20Database%20Layer.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="creating a networking environment cloud architecting"><div class="mod-head"><span class="badge">M07</span><span class="mod-title">Creating a Networking Environment</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M07%20Cheat%20Sheet%20%E2%80%94%20Creating%20a%20Networking%20Environment.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M07%20Study%20Notes%20%E2%80%94%20Creating%20a%20Networking%20Environment.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="connecting networks cloud architecting"><div class="mod-head"><span class="badge">M08</span><span class="mod-title">Connecting Networks</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M08%20Cheat%20Sheet%20%E2%80%94%20Connecting%20Networks.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M08%20Study%20Notes%20%E2%80%94%20Connecting%20Networks.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="securing user, application, and data access cloud architecting"><div class="mod-head"><span class="badge">M09</span><span class="mod-title">Securing User, Application, and Data Access</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M09%20Cheat%20Sheet%20%E2%80%94%20Securing%20User%2C%20Application%2C%20and%20Data%20Access.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M09%20Study%20Notes%20%E2%80%94%20Securing%20User%2C%20Application%2C%20and%20Data%20Access.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="implementing monitoring, elasticity, and high availability cloud architecting"><div class="mod-head"><span class="badge">M10</span><span class="mod-title">Implementing Monitoring, Elasticity, and High Availability</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M10%20Cheat%20Sheet%20%E2%80%94%20Implementing%20Monitoring%2C%20Elasticity%2C%20and%20High%20Availability.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M10%20Study%20Notes%20%E2%80%94%20Implementing%20Monitoring%2C%20Elasticity%2C%20and%20High%20Availability.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="automating your architecture cloud architecting"><div class="mod-head"><span class="badge">M11</span><span class="mod-title">Automating Your Architecture</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M11%20Cheat%20Sheet%20%E2%80%94%20Automating%20Your%20Architecture.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M11%20Study%20Notes%20%E2%80%94%20Automating%20Your%20Architecture.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="caching content cloud architecting"><div class="mod-head"><span class="badge">M12</span><span class="mod-title">Caching Content</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M12%20Cheat%20Sheet%20%E2%80%94%20Caching%20Content.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M12%20Study%20Notes%20%E2%80%94%20Caching%20Content.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="building decoupled architectures cloud architecting"><div class="mod-head"><span class="badge">M13</span><span class="mod-title">Building Decoupled Architectures</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M13%20Cheat%20Sheet%20%E2%80%94%20Building%20Decoupled%20Architectures.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M13%20Study%20Notes%20%E2%80%94%20Building%20Decoupled%20Architectures.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="building serverless architectures and microservices cloud architecting"><div class="mod-head"><span class="badge">M14</span><span class="mod-title">Building Serverless Architectures and Microservices</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M14%20Cheat%20Sheet%20%E2%80%94%20Building%20Serverless%20Architectures%20and%20Microservices.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M14%20Study%20Notes%20%E2%80%94%20Building%20Serverless%20Architectures%20and%20Microservices.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data engineering patterns cloud architecting"><div class="mod-head"><span class="badge">M15</span><span class="mod-title">Data Engineering Patterns</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M15%20Cheat%20Sheet%20%E2%80%94%20Data%20Engineering%20Patterns.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M15%20Study%20Notes%20%E2%80%94%20Data%20Engineering%20Patterns.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="planning for disaster cloud architecting"><div class="mod-head"><span class="badge">M16</span><span class="mod-title">Planning for Disaster</span></div><div class="docs"><a class="doc cheat" href="cloud-architecting/M16%20Cheat%20Sheet%20%E2%80%94%20Planning%20for%20Disaster.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-architecting/M16%20Study%20Notes%20%E2%80%94%20Planning%20for%20Disaster.pdf">Study Notes</a></div></li>
+  </ul>
+</section>
+<section class="course" id="cloud-developing" data-track="associate">
+  <div class="course-hd"><h2>AWS Academy Cloud Developing</h2><p class="course-meta">Modules 2–13 · Developer associate track</p><p class="course-blurb">Building applications on AWS with the SDKs: S3, IAM, DynamoDB, API Gateway REST APIs, Lambda &amp; event-driven serverless, containers, caching, messaging (SQS/SNS), Step Functions, Cognito security, and CI/CD pipelines.</p></div>
+  <ul class="mods">
+    <li class="mod" data-t="introduction to developing on aws cloud developing"><div class="mod-head"><span class="badge">M02</span><span class="mod-title">Introduction to Developing on AWS</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M02%20Cheat%20Sheet%20%E2%80%94%20Introduction%20to%20Developing%20on%20AWS.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M02%20Study%20Notes%20%E2%80%94%20Introduction%20to%20Developing%20on%20AWS.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="developing storage solutions cloud developing"><div class="mod-head"><span class="badge">M03</span><span class="mod-title">Developing Storage Solutions</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M03%20Cheat%20Sheet%20%E2%80%94%20Developing%20Storage%20Solutions.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M03%20Study%20Notes%20%E2%80%94%20Developing%20Storage%20Solutions.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="securing access to cloud resources cloud developing"><div class="mod-head"><span class="badge">M04</span><span class="mod-title">Securing Access to Cloud Resources</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M04%20Cheat%20Sheet%20%E2%80%94%20Securing%20Access%20to%20Cloud%20Resources.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M04%20Study%20Notes%20%E2%80%94%20Securing%20Access%20to%20Cloud%20Resources.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="developing flexible nosql solutions cloud developing"><div class="mod-head"><span class="badge">M05</span><span class="mod-title">Developing Flexible NoSQL Solutions</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M05%20Cheat%20Sheet%20%E2%80%94%20Developing%20Flexible%20NoSQL%20Solutions.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M05%20Study%20Notes%20%E2%80%94%20Developing%20Flexible%20NoSQL%20Solutions.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="developing rest apis cloud developing"><div class="mod-head"><span class="badge">M06</span><span class="mod-title">Developing REST APIs</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M06%20Cheat%20Sheet%20%E2%80%94%20Developing%20REST%20APIs.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M06%20Study%20Notes%20%E2%80%94%20Developing%20REST%20APIs.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="developing event-driven serverless solutions cloud developing"><div class="mod-head"><span class="badge">M07</span><span class="mod-title">Developing Event-Driven Serverless Solutions</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M07%20Cheat%20Sheet%20%E2%80%94%20Developing%20Event-Driven%20Serverless%20Solutions.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M07%20Study%20Notes%20%E2%80%94%20Developing%20Event-Driven%20Serverless%20Solutions.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="introducing containers and container services cloud developing"><div class="mod-head"><span class="badge">M08</span><span class="mod-title">Introducing Containers and Container Services</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M08%20Cheat%20Sheet%20%E2%80%94%20Introducing%20Containers%20and%20Container%20Services.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M08%20Study%20Notes%20%E2%80%94%20Introducing%20Containers%20and%20Container%20Services.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="caching information for scalability cloud developing"><div class="mod-head"><span class="badge">M09</span><span class="mod-title">Caching Information for Scalability</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M09%20Cheat%20Sheet%20%E2%80%94%20Caching%20Information%20for%20Scalability.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M09%20Study%20Notes%20%E2%80%94%20Caching%20Information%20for%20Scalability.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="developing with messaging services cloud developing"><div class="mod-head"><span class="badge">M10</span><span class="mod-title">Developing with Messaging Services</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M10%20Cheat%20Sheet%20%E2%80%94%20Developing%20with%20Messaging%20Services.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M10%20Study%20Notes%20%E2%80%94%20Developing%20with%20Messaging%20Services.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="defining workflows to orchestrate functions cloud developing"><div class="mod-head"><span class="badge">M11</span><span class="mod-title">Defining Workflows to Orchestrate Functions</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M11%20Cheat%20Sheet%20%E2%80%94%20Defining%20Workflows%20to%20Orchestrate%20Functions.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M11%20Study%20Notes%20%E2%80%94%20Defining%20Workflows%20to%20Orchestrate%20Functions.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="developing secure applications on aws cloud developing"><div class="mod-head"><span class="badge">M12</span><span class="mod-title">Developing Secure Applications on AWS</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M12%20Cheat%20Sheet%20%E2%80%94%20Developing%20Secure%20Applications%20on%20AWS.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M12%20Study%20Notes%20%E2%80%94%20Developing%20Secure%20Applications%20on%20AWS.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="automating deployment using ci/cd pipelines cloud developing"><div class="mod-head"><span class="badge">M13</span><span class="mod-title">Automating Deployment Using CI/CD Pipelines</span></div><div class="docs"><a class="doc cheat" href="cloud-developing/M13%20Cheat%20Sheet%20%E2%80%94%20Automating%20Deployment%20Using%20CI-CD%20Pipelines.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-developing/M13%20Study%20Notes%20%E2%80%94%20Automating%20Deployment%20Using%20CI-CD%20Pipelines.pdf">Study Notes</a></div></li>
+  </ul>
+</section>
+<section class="course" id="cloud-operations" data-track="associate">
+  <div class="course-hd"><h2>AWS Academy Cloud Operations</h2><p class="course-meta">Modules 1–11 · Systems operations (SysOps) track</p><p class="course-blurb">Operating workloads on AWS: tooling &amp; automation, compute (servers, scaling, containers, databases), networking, storage &amp; archiving, monitoring &amp; security, cost management, and automated deployments.</p></div>
+  <ul class="mods">
+    <li class="mod" data-t="understanding systems operations on aws cloud operations"><div class="mod-head"><span class="badge">M01</span><span class="mod-title">Understanding Systems Operations on AWS</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M01%20Cheat%20Sheet%20%E2%80%94%20Understanding%20Systems%20Operations%20on%20AWS.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M01%20Study%20Notes%20%E2%80%94%20Understanding%20Systems%20Operations%20on%20AWS.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="tooling and automation cloud operations"><div class="mod-head"><span class="badge">M02</span><span class="mod-title">Tooling and Automation</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M02%20Cheat%20Sheet%20%E2%80%94%20Tooling%20and%20Automation.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M02%20Study%20Notes%20%E2%80%94%20Tooling%20and%20Automation.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="computing (servers) cloud operations"><div class="mod-head"><span class="badge">M03</span><span class="mod-title">Computing (Servers)</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M03%20Cheat%20Sheet%20%E2%80%94%20Computing%20%28Servers%29.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M03%20Study%20Notes%20%E2%80%94%20Computing%20%28Servers%29.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="computing (scaling and name resolution) cloud operations"><div class="mod-head"><span class="badge">M04</span><span class="mod-title">Computing (Scaling and Name Resolution)</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M04%20Cheat%20Sheet%20%E2%80%94%20Computing%20%28Scaling%20and%20Name%20Resolution%29.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M04%20Study%20Notes%20%E2%80%94%20Computing%20%28Scaling%20and%20Name%20Resolution%29.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="computing (containers and serverless) cloud operations"><div class="mod-head"><span class="badge">M05</span><span class="mod-title">Computing (Containers and Serverless)</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M05%20Cheat%20Sheet%20%E2%80%94%20Computing%20%28Containers%20and%20Serverless%29.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M05%20Study%20Notes%20%E2%80%94%20Computing%20%28Containers%20and%20Serverless%29.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="computing (database services) cloud operations"><div class="mod-head"><span class="badge">M06</span><span class="mod-title">Computing (Database Services)</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M06%20Cheat%20Sheet%20%E2%80%94%20Computing%20%28Database%20Services%29.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M06%20Study%20Notes%20%E2%80%94%20Computing%20%28Database%20Services%29.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="networking cloud operations"><div class="mod-head"><span class="badge">M07</span><span class="mod-title">Networking</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M07%20Cheat%20Sheet%20%E2%80%94%20Networking.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M07%20Study%20Notes%20%E2%80%94%20Networking.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="storage and archiving cloud operations"><div class="mod-head"><span class="badge">M08</span><span class="mod-title">Storage and Archiving</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M08%20Cheat%20Sheet%20%E2%80%94%20Storage%20and%20Archiving.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M08%20Study%20Notes%20%E2%80%94%20Storage%20and%20Archiving.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="monitoring and security cloud operations"><div class="mod-head"><span class="badge">M09</span><span class="mod-title">Monitoring and Security</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M09%20Cheat%20Sheet%20%E2%80%94%20Monitoring%20and%20Security.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M09%20Study%20Notes%20%E2%80%94%20Monitoring%20and%20Security.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="managing resource consumption cloud operations"><div class="mod-head"><span class="badge">M10</span><span class="mod-title">Managing Resource Consumption</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M10%20Cheat%20Sheet%20%E2%80%94%20Managing%20Resource%20Consumption.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M10%20Study%20Notes%20%E2%80%94%20Managing%20Resource%20Consumption.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="creating automated and repeatable deployments cloud operations"><div class="mod-head"><span class="badge">M11</span><span class="mod-title">Creating Automated and Repeatable Deployments</span></div><div class="docs"><a class="doc cheat" href="cloud-operations/M11%20Cheat%20Sheet%20%E2%80%94%20Creating%20Automated%20and%20Repeatable%20Deployments.pdf">Cheat Sheet</a><a class="doc notes" href="cloud-operations/M11%20Study%20Notes%20%E2%80%94%20Creating%20Automated%20and%20Repeatable%20Deployments.pdf">Study Notes</a></div></li>
+  </ul>
+</section>
+</section>
+<section class="track" data-track="datacenter">
+  <div class="track-head"><h2>Data Center</h2><span class="track-count">1 course · 18 modules</span></div>
+<section class="course" id="engineering-operations-technician" data-track="datacenter">
+  <div class="course-hd"><h2>AWS Academy Engineering Operations Technician</h2><p class="course-meta">Modules 1–18 · Data center facilities &amp; operations</p><p class="course-blurb">The physical data center end to end: electrical &amp; power systems, batteries &amp; generators, cooling &amp; fire protection, racks &amp; space, plus reliability, availability, efficiency, operations, safety, and regulations.</p></div>
+  <ul class="mods">
+    <li class="mod" data-t="data center basics engineering ops"><div class="mod-head"><span class="badge">M01</span><span class="mod-title">Data Center Basics</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M01%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Basics.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M01%20Study%20Notes%20%E2%80%94%20Data%20Center%20Basics.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center physical infrastructure - overview engineering ops"><div class="mod-head"><span class="badge">M02</span><span class="mod-title">Data Center Physical Infrastructure - Overview</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M02%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Overview.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M02%20Study%20Notes%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Overview.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center physical infrastructure - space engineering ops"><div class="mod-head"><span class="badge">M03</span><span class="mod-title">Data Center Physical Infrastructure - Space</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M03%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Space.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M03%20Study%20Notes%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Space.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="electrical fundamentals engineering ops"><div class="mod-head"><span class="badge">M04</span><span class="mod-title">Electrical Fundamentals</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M04%20Cheat%20Sheet%20%E2%80%94%20Electrical%20Fundamentals.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M04%20Study%20Notes%20%E2%80%94%20Electrical%20Fundamentals.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center physical infrastructure - power engineering ops"><div class="mod-head"><span class="badge">M05</span><span class="mod-title">Data Center Physical Infrastructure - Power</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M05%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Power.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M05%20Study%20Notes%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Power.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center battery overview engineering ops"><div class="mod-head"><span class="badge">M06</span><span class="mod-title">Data Center Battery Overview</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M06%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Battery%20Overview.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M06%20Study%20Notes%20%E2%80%94%20Data%20Center%20Battery%20Overview.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center generators engineering ops"><div class="mod-head"><span class="badge">M07</span><span class="mod-title">Data Center Generators</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M07%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Generators.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M07%20Study%20Notes%20%E2%80%94%20Data%20Center%20Generators.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center physical infrastructure - cooling engineering ops"><div class="mod-head"><span class="badge">M08</span><span class="mod-title">Data Center Physical Infrastructure - Cooling</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M08%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Cooling.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M08%20Study%20Notes%20%E2%80%94%20Data%20Center%20Physical%20Infrastructure%20-%20Cooling.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="fire protection in the data center engineering ops"><div class="mod-head"><span class="badge">M09</span><span class="mod-title">Fire Protection in the Data Center</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M09%20Cheat%20Sheet%20%E2%80%94%20Fire%20Protection%20in%20the%20Data%20Center.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M09%20Study%20Notes%20%E2%80%94%20Fire%20Protection%20in%20the%20Data%20Center.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center racks engineering ops"><div class="mod-head"><span class="badge">M10</span><span class="mod-title">Data Center Racks</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M10%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Racks.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M10%20Study%20Notes%20%E2%80%94%20Data%20Center%20Racks.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center maintenance engineering ops"><div class="mod-head"><span class="badge">M11</span><span class="mod-title">Data Center Maintenance</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M11%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Maintenance.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M11%20Study%20Notes%20%E2%80%94%20Data%20Center%20Maintenance.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center reliability engineering ops"><div class="mod-head"><span class="badge">M12</span><span class="mod-title">Data Center Reliability</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M12%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Reliability.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M12%20Study%20Notes%20%E2%80%94%20Data%20Center%20Reliability.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center availability engineering ops"><div class="mod-head"><span class="badge">M13</span><span class="mod-title">Data Center Availability</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M13%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Availability.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M13%20Study%20Notes%20%E2%80%94%20Data%20Center%20Availability.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center efficiency engineering ops"><div class="mod-head"><span class="badge">M14</span><span class="mod-title">Data Center Efficiency</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M14%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Efficiency.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M14%20Study%20Notes%20%E2%80%94%20Data%20Center%20Efficiency.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="managing data centers engineering ops"><div class="mod-head"><span class="badge">M15</span><span class="mod-title">Managing Data Centers</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M15%20Cheat%20Sheet%20%E2%80%94%20Managing%20Data%20Centers.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M15%20Study%20Notes%20%E2%80%94%20Managing%20Data%20Centers.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center operations engineering ops"><div class="mod-head"><span class="badge">M16</span><span class="mod-title">Data Center Operations</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M16%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Operations.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M16%20Study%20Notes%20%E2%80%94%20Data%20Center%20Operations.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="safety considerations in the data center engineering ops"><div class="mod-head"><span class="badge">M17</span><span class="mod-title">Safety Considerations in the Data Center</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M17%20Cheat%20Sheet%20%E2%80%94%20Safety%20Considerations%20in%20the%20Data%20Center.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M17%20Study%20Notes%20%E2%80%94%20Safety%20Considerations%20in%20the%20Data%20Center.pdf">Study Notes</a></div></li>
+    <li class="mod" data-t="data center regulations engineering ops"><div class="mod-head"><span class="badge">M18</span><span class="mod-title">Data Center Regulations</span></div><div class="docs"><a class="doc cheat" href="engineering-operations-technician/M18%20Cheat%20Sheet%20%E2%80%94%20Data%20Center%20Regulations.pdf">Cheat Sheet</a><a class="doc notes" href="engineering-operations-technician/M18%20Study%20Notes%20%E2%80%94%20Data%20Center%20Regulations.pdf">Study Notes</a></div></li>
+  </ul>
+</section>
+</section>
   </main>
+
   <footer>
     <div class="wrap">
-      Authored study materials — distilled from the course decks, not verbatim AWS content.
-      For personal study use. &nbsp;·&nbsp; Source: <a href="https://github.com/frazier-at-cpcc/AWS-Study-Materials">github.com/frazier-at-cpcc/AWS-Study-Materials</a>
+      Authored study aids — distilled from the AWS Academy course decks and speaker notes, not verbatim AWS content. Intended for personal study use. AWS, AWS Academy, and related marks belong to Amazon Web Services, Inc.
+      <div class="foot-mono">8 courses · 86 modules · 172 documents · <a href="https://github.com/frazier-at-cpcc/AWS-Study-Materials">github.com/frazier-at-cpcc/AWS-Study-Materials</a></div>
     </div>
   </footer>
+  <script>
+(function(){
+  var q=document.getElementById('q');
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var courses=[].slice.call(document.querySelectorAll('.course'));
+  var tracks=[].slice.call(document.querySelectorAll('.track'));
+  var count=document.getElementById('tbcount');
+  var nores=document.getElementById('noresults');
+  var nrq=document.getElementById('nrq');
+  var track='all';
+  function apply(){
+    var query=q.value.trim().toLowerCase();
+    var shown=0;
+    courses.forEach(function(c){
+      var inTrack = track==='all' || c.getAttribute('data-track')===track;
+      var vis=0;
+      [].slice.call(c.querySelectorAll('li.mod')).forEach(function(m){
+        var ok = inTrack && (!query || m.getAttribute('data-t').indexOf(query)!==-1);
+        m.classList.toggle('hide',!ok);
+        if(ok){vis++;shown++;}
+      });
+      c.classList.toggle('hide',vis===0);
+    });
+    tracks.forEach(function(t){
+      var any=[].slice.call(t.querySelectorAll('.course')).some(function(c){return !c.classList.contains('hide');});
+      t.classList.toggle('hide',!any);
+    });
+    count.textContent=shown+(shown===1?' module':' modules');
+    var none=shown===0;
+    nores.hidden=!none;
+    if(none){nrq.textContent=q.value.trim();}
+  }
+  q.addEventListener('input',apply);
+  chips.forEach(function(ch){ch.addEventListener('click',function(){
+    chips.forEach(function(x){x.classList.remove('is-on');});
+    ch.classList.add('is-on');track=ch.getAttribute('data-track');apply();
+  });});
+  document.querySelectorAll('.dir-link').forEach(function(a){a.addEventListener('click',function(){
+    q.value='';track='all';chips.forEach(function(x){x.classList.toggle('is-on',x.getAttribute('data-track')==='all');});apply();
+  });});
+  var clr=document.getElementById('clear2');
+  if(clr)clr.addEventListener('click',function(){q.value='';apply();q.focus();});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}
+    if(e.key==='Escape'&&document.activeElement===q){q.value='';apply();q.blur();}
+  });
+})();
+</script>
 </body>
 </html>
