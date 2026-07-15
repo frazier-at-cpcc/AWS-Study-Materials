@@ -1,6 +1,6 @@
 # AWS Study Materials
 
-Condensed **study notes** and printable **cheat sheets** for four AWS Academy courses —
+Condensed **study notes** and printable **cheat sheets** for five AWS Academy courses —
 one of each per module, built for fast review and exam readiness.
 
 **📖 Browse online:** https://frazier-at-cpcc.github.io/AWS-Study-Materials/
@@ -33,6 +33,11 @@ Implementing Generative AI · Bridging to Certification
 Introduction to Machine Learning · Implementing a Machine Learning Pipeline with Amazon
 SageMaker · Introducing Forecasting · Introducing Computer Vision · Introducing Natural
 Language Processing · Introducing Generative AI
+
+### [Engineering Operations Technician](engineering-operations-technician/) — Modules 1–18 · Data center facilities & operations
+Data Center Basics · Physical Infrastructure (Overview, Space, Power, Cooling) · Electrical
+Fundamentals · Batteries · Generators · Fire Protection · Racks · Maintenance · Reliability ·
+Availability · Efficiency · Management · Operations · Safety · Regulations
 
 ## About
 
