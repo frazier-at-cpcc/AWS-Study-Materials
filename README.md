@@ -1,6 +1,6 @@
 # AWS Study Materials
 
-Condensed **study notes** and printable **cheat sheets** for two AWS Academy courses —
+Condensed **study notes** and printable **cheat sheets** for three AWS Academy courses —
 one of each per module, built for fast review and exam readiness.
 
 **📖 Browse online:** https://frazier-at-cpcc.github.io/AWS-Study-Materials/
@@ -18,6 +18,11 @@ Each module ships two documents:
 Cloud Concepts · Cloud Economics & Billing · Global Infrastructure · Cloud Security ·
 Networking & Content Delivery · Compute · Storage · Databases · Cloud Architecture ·
 Automatic Scaling & Monitoring
+
+### [Cloud Security Foundations](cloud-security-foundations/) — Modules 2–7 · Cloud security fundamentals
+Introduction to Security on AWS · Securing Access to Cloud Resources · Securing Your
+Infrastructure · Protecting Data in Your Application · Logging & Monitoring · Responding
+to and Managing an Incident
 
 ### [Generative AI Foundations](generative-ai-foundations/) — Modules 2–9 · AI Practitioner track
 Introducing AI · Introducing Generative AI · Prompts & Prompt Engineering · Foundation
