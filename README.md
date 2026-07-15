@@ -1,6 +1,6 @@
 # AWS Study Materials
 
-Condensed **study notes** and printable **cheat sheets** for six AWS Academy courses —
+Condensed **study notes** and printable **cheat sheets** for seven AWS Academy courses —
 one of each per module, built for fast review and exam readiness.
 
 **📖 Browse online:** https://frazier-at-cpcc.github.io/AWS-Study-Materials/
@@ -43,6 +43,11 @@ Availability · Efficiency · Management · Operations · Safety · Regulations
 Understanding Systems Operations · Tooling & Automation · Computing (Servers · Scaling ·
 Containers · Databases) · Networking · Storage & Archiving · Monitoring & Security ·
 Managing Resource Consumption · Automated & Repeatable Deployments
+
+### [Cloud Developing](cloud-developing/) — Modules 2–13 · Developer associate track
+Introduction to Developing · Storage (S3) · IAM · DynamoDB · REST APIs · Event-Driven
+Serverless (Lambda) · Containers · Caching · Messaging (SQS/SNS) · Step Functions ·
+Secure Applications (Cognito) · CI/CD Pipelines
 
 ## About
 
